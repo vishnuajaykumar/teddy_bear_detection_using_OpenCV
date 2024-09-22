@@ -1,35 +1,47 @@
-#Teddy_Bear_Detector
+# 🧸 Teddy Bear Detection System 🧸
 
-The core of our device is like a teddy bear detector. Think of it as a 
-security camera, but instead of catching burglars, it's on the lookout for teddy 
-bears. When it spots one, not only does it recognize it, but it also takes a 
-short video of it and shouts out, "Teddy bear detected!" via a speech 
-announcement. This is a modification to the existing code detect.py.
+**Author**: Vishnu AJay  
+**Date**: 9/26/2022  
+**Project**: Teddy Bear Detection with TensorFlow & OpenCV  
 
+---
 
-Raspberry Pi: It runs the main script and manages both the camera and the 
-audio output.
+**"Lights, Camera, Teddy Bear!"**  
 
-Camera: Attached to the Pi, it continuously captures video. With the help of 
-the OpenCV library, it processes the video to look for the teddy bear.
+This project uses **TensorFlow**, **OpenCV**, and a pre-trained deep learning model to detect a very specific and huggable friend—teddy bears! If a teddy bear is spotted on camera, the system provides audio feedback and starts recording a video. Now, you'll never miss a cuddly moment again! 🧸🎥
 
-Speakers: These are connected to the Pi to play the speech output.
+---
 
-How It Operates:
-Once the detect.py is run. The device recognizes the teddy bear, starts 
-recording a video clip, and audibly announces. After recording for 20 
-seconds, it saves the video clip to a specific folder.
-OpenCV: Using a trained CV model, our device can detect objects, 
-including teddy bears. When it finds one in the camera's view, it draws a box 
-around it, labels it, and triggers the recording. The code is looking for the 
-appearance of the label in this case.
+## 🧸 Project Overview
 
-Speech Capabilities: Once a teddy bear is detected, the device uses pyTTS 
-to convert the text message "Teddy bear detected!" into speech. This is then 
-played out loud, so you know a teddy has been spotted even without 
-looking at the screen. It is recorded in the "Recodings" directory and with 
-the current time stamp. The writing process uses Gstreamer with a MJPG 
-codec. The recorded files are saved as a short AVI file. 
+This project loads a pre-trained **TensorFlow** object detection model and uses a webcam (or an image) to detect objects, particularly **teddy bears** 🧸. When a teddy bear is detected, the system provides a voice alert using **pyttsx3** (text-to-speech), draws bounding boxes around detected objects, and saves a video recording of the detection event.
 
+## 🛠 Features
 
-In essence, our device is a fun blend of computer vision and speech capabilities.
+- **Real-Time Object Detection**: Detects objects using a **TensorFlow SSD MobileNet** model trained on the **COCO dataset**.
+- **Teddy Bear Detection**: Specifically identifies teddy bears and responds with both visual and audio alerts.
+- **Automatic Recording**: Records 20 seconds of footage when a teddy bear is detected and saves it to your computer.
+- **Audio Alerts**: Uses a text-to-speech engine to announce when a teddy bear is detected. ("Teddy Bear Detected!")
+- **Image & Webcam Support**: Can either process a static image or live webcam feed for detection.
+
+---
+
+## ✨ Components & Libraries
+
+1. **TensorFlow**: The neural network used for object detection.
+2. **OpenCV**: For capturing images, drawing bounding boxes, and handling webcam/video feed.
+3. **pyttsx3**: A text-to-speech engine for audio feedback.
+4. **Pickle**: Loads COCO dataset labels for object classification.
+5. **Python**: The language powering this magic! 🐍
+
+### 💻 Libraries Required
+
+- `numpy`
+- `opencv-python`
+- `pyttsx3`
+- `pickle`
+
+To install these, run:
+
+```bash
+pip install numpy opencv-python pyttsx3
