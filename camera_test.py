@@ -3,7 +3,7 @@ import cv2
 # Initialize the camera
 cap = cv2.VideoCapture(0)  # Use 0 for the built-in camera, or change to 1 for an external camera if needed
 
-# Initialize the person detection model (you can use other models like YOLO, Haar Cascades, etc.)
+
 hog = cv2.HOGDescriptor()
 hog.setSVMDetector(cv2.HOGDescriptor_getDefaultPeopleDetector())
 
