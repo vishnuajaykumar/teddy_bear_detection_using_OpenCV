@@ -13,6 +13,8 @@ This project uses **TensorFlow**, **OpenCV**, and a pre-trained deep learning mo
 ---
 
 ## 🧸 Project Overview
+DOWNLOAD THE TENSOR FLOW MODEL FROM HERE : https://drive.google.com/file/d/1wo24-zq2eomBsVj6q9nIImyymYFpXa71/view?usp=sharing 
+
 
 This project loads a pre-trained **TensorFlow** object detection model and uses a webcam (or an image) to detect objects, particularly **teddy bears** 🧸. When a teddy bear is detected, the system provides a voice alert using **pyttsx3** (text-to-speech), draws bounding boxes around detected objects, and saves a video recording of the detection event.
 
