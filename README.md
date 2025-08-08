@@ -4,6 +4,8 @@
 **Date**: 9/26/2022  
 **Project**: Teddy Bear Detection with TensorFlow & OpenCV  
 
+
+https://youtu.be/FTTMfeGV4JY
 ---
 
 **"Lights, Camera, Teddy Bear!"**  
